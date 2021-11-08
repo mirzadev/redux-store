@@ -71,13 +71,7 @@ THEN I find that the app uses Redux instead of the Context API
 ## Installation
 💾     
 - npm install
-- npm i apollo-server-express graphql
-- npm install jsonwebtoken
-- npx create-react-app client
-- npm i @apollo/client graphql
-- npm install -D concurrently
-- npm install react-router-dom
-- npm i jwt-decode
+- npm run seed
 
 ## Tools
 - NodeJS
