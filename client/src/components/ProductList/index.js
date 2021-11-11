@@ -5,6 +5,7 @@ import { useQuery } from '@apollo/client';
 
 import ProductItem from '../ProductItem';
 import { QUERY_PRODUCTS } from '../../utils/queries';
+import { idbPromise } from "../../utils/helpers";
 import spinner from '../../assets/spinner.gif';
 
 function ProductList() {
@@ -20,8 +21,22 @@ function ProductList() {
         type: UPDATE_PRODUCTS,
         products: data.products
       });
+
+      data.products.forEach((product) => {
+        idbPromise('products', 'put', product);
+      });
+      // add else if to check if `loading` is undefined in `useQuery()` Hook
+    } else if (!loading) {
+      // since we're offline, get all of the data from the `products` store
+      idbPromise('products', 'get').then((products) => {
+        // use retrieved data to set global state for offline browsing
+        dispatch({
+          type: UPDATE_PRODUCTS,
+          products: products
+        });
+      });
     }
-  }, [data, dispatch]);
+  }, [data, loading, dispatch]);
 
   function filterProducts() {
     if (!currentCategory) {
