@@ -20,18 +20,23 @@
 
 
 ## App Screenshots
-- Picture of the Application.
-![Application Screen](./images/book-searched.JPG)
+
+- Picture of the Application Home Screen.
+![Application Home Screen](./images/Application-Home-Screen.JPG)
 
 - Picture of Application with Cart
-![Application with Cart](./images/login-signup.gif)
+![Application with Cart](./images/Application-With-Cart.JPG)
 
 - Picture of Payment with Stripe
 
-![Payment options](./images/search-my-books.gif)
+![Payment options](./images/Payment-Option.JPG)
+
+- Picture of Payment Success Message
+
+![Payment Success Message](./images/Success-Message.JPG)
 
 - Order History.
-![Order history](./images/see-saved-books-delete.gif)
+![Order history](./images/Order-History.JPG)
 
 
 ## Overview Links
@@ -39,7 +44,7 @@
 
 - [Application Deployed in Heroku](https://book-search-engine-mirza.herokuapp.com/)
 
-- [Github link](https://github.com/mirzadev/Book-Search-Engine)
+- [Github link](https://mirzadev.github.io/redux-store/)
 
 
 ## User Story
