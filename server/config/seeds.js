@@ -112,7 +112,7 @@ db.once('open', async () => {
       description:
         'SuperMax TM-1 215/60R17 96 T Tire.',
       image: 'Supermax-Tires.jpg',
-      price: 19.99,
+      price: 119.99,
       quantity: 100
     },
     {
@@ -130,7 +130,7 @@ db.once('open', async () => {
       description:
         'Long-Sleeve Mockneck Top.',
       image: 'Ladies-T-Shirt.jpg',
-      price: 19.99,
+      price: 89.99,
       quantity: 30
     },
     {
@@ -139,7 +139,7 @@ db.once('open', async () => {
       description:
         'Fashionable Wide Striped Sport Shirt in Pink for Men – Lyst.',
       image: 'Men-Shirt.jpg',
-      price: 19.99,
+      price: 49.99,
       quantity: 20
     },
     {
@@ -183,7 +183,7 @@ db.once('open', async () => {
       description:
         'A perfect gift for your friend.',
       image: 'Crystal-Eiffel-Tower.jpg',
-      price: 7.99,
+      price: 37.99,
       quantity: 100
     },
     {
@@ -192,7 +192,7 @@ db.once('open', async () => {
       description:
         'Choose a statement piece full of freedom and courage with this exquisite eagle. Depicted in sumptuous clear crystal with 646 facets, it is a dynamic design. Perfect as a stand-alone piece in your home, it would also complement the collection of a nature lover.',
       image: 'Crystal-Eagle.jpg',
-      price: 9.99,
+      price: 79.99,
       quantity: 600
     }
   ]);
