@@ -26,6 +26,7 @@ export function idbPromise(storeName, method, object) {
     request.onerror = function (e) {
       console.log('There was an error');
     };
+
     // on database open success
     request.onsuccess = function (e) {
       // save a reference of the database to the `db` variable

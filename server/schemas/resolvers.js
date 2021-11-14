@@ -1,6 +1,7 @@
 const { AuthenticationError } = require('apollo-server-express');
 const { User, Product, Category, Order } = require('../models');
 const { signToken } = require('../utils/auth');
+const stripe = require('stripe')('sk_test_4eC39HqLyjWDarjtT1zdp7dc');
 
 const resolvers = {
   Query: {
@@ -56,8 +57,8 @@ const resolvers = {
       const url = new URL(context.headers.referer).origin;
       const order = new Order({ products: args.products });
       const { products } = await order.populate('products').execPopulate();
-      const line_items = [];
 
+      const line_items = [];
       for (let i = 0; i < products.length; i++) {
         // generate product id
         const product = await stripe.products.create({
@@ -90,7 +91,6 @@ const resolvers = {
       return { session: session.id };
 
     }
-
 
   },
 

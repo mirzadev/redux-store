@@ -55,6 +55,7 @@ const typeDefs = gql`
     updateProduct(_id: ID!, quantity: Int!): Product
     login(email: String!, password: String!): Auth
   }
+  
 `;
 
 module.exports = typeDefs;

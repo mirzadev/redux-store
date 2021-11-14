@@ -1,5 +1,6 @@
 // import our actions
 import { reducer } from '../utils/reducers';
+
 import {
       UPDATE_PRODUCTS,
       UPDATE_CATEGORIES,
@@ -61,7 +62,6 @@ test('UPDATE_CURRENT_CATEGORY', () => {
       expect(newState.currentCategory).toBe('2');
       expect(initialState.currentCategory).toBe('1');
 });
-
 test('ADD_TO_CART', () => {
       let newState = reducer(initialState, {
             type: ADD_TO_CART,
@@ -145,4 +145,3 @@ test('TOGGLE_CART', () => {
 
       expect(newState2.cartOpen).toBe(false);
 });
-

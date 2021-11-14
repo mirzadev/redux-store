@@ -44,6 +44,7 @@ export const reducer = (state, action) => {
                         cart: [...state.cart, action.product]
                   };
 
+
             // to add multiple items to cart
             case ADD_MULTIPLE_TO_CART:
                   return {

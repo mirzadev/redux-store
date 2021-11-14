@@ -15,6 +15,7 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Nav from './components/Nav';
 import { StoreProvider } from "./utils/GlobalState";
+import Success from "./pages/Success";
 import OrderHistory from './pages/OrderHistory';
 
 const httpLink = createHttpLink({
@@ -22,7 +23,7 @@ const httpLink = createHttpLink({
 });
 
 const authLink = setContext((_, { headers }) => {
-  const token = localStorage.getItem('id_token');
+  const token = localStorage.getItem('shop_id_token');
   return {
     headers: {
       ...headers,
@@ -47,10 +48,21 @@ function App() {
               <Route exact path="/" component={Home} />
               <Route exact path="/login" component={Login} />
               <Route exact path="/signup" component={Signup} />
+              <Route exact path="/success" component={Success} />
               <Route exact path="/orderHistory" component={OrderHistory} />
               <Route exact path="/products/:id" component={Detail} />
               <Route component={NoMatch} />
             </Switch>
+
+            <footer className='row center mt-3' id="footer-items">
+              <div class="contact-address">
+
+                <a class="contact-email" href="mailto:customerservice@jlm_tourism.com">Contact: Email - customerservice@discount-product-fl.com</a>
+
+                <a class="location-address" href="https://search.yahoo.com/local/s;_ylt=AwrJ61fDlZBhIw4ARAVXNyoA;_ylu=Y29sbwNiZjEEcG9zAzEEdnRpZAMEc2VjA3Nj?p=mall+in+hollywood+florida&selectedId=91936055&fr=mcafee" target="_blank">Address: 1735 E Young Cir, Hollywood, FL · (305) 947-1664</a>
+
+              </div>
+            </footer>
           </StoreProvider>
         </div>
       </Router>

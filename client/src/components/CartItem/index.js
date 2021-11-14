@@ -35,7 +35,6 @@ const CartItem = ({ item }) => {
             }
       };
 
-
       return (
             <div className="flex-row">
                   <div>
@@ -61,10 +60,9 @@ const CartItem = ({ item }) => {
                               >
                                     🗑️
                               </span>
-
                         </div>
                   </div>
-            </div >
+            </div>
       );
 }
 

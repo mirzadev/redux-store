@@ -6,6 +6,7 @@ import Cart from "../components/Cart";
 import { QUERY_PRODUCTS } from '../utils/queries';
 import spinner from '../assets/spinner.gif';
 
+
 import {
   REMOVE_FROM_CART,
   UPDATE_CART_QUANTITY,
@@ -86,6 +87,7 @@ function Detail() {
     // upon removal from cart, delete the item from IndexedDB using the `currentProduct._id` to locate what to remove
     idbPromise('cart', 'delete', { ...currentProduct });
   };
+
 
   return (
     <>

@@ -1,0 +1,43 @@
+.main-header{
+      margin-left: 50px;
+      padding-bottom: 50px;
+      margin-bottom: 30px;
+      margin-top: 0px;
+      position: fixed;     
+}
+
+.app-logo{
+      margin-left: 0px;
+      float: left;
+}
+.app-heading{
+      
+      margin-left: 50px;
+}
+.mx-1, .mx-2{
+      margin-top: 15px;
+      font-size: 25px;
+      font-weight: bold;
+     
+}
+.mx-1{
+      margin-right: 50px;
+      
+}
+.mx-2{
+      margin-left: 30px;
+}
+.signup, .login, .order-history, .logout-option {
+      color: gold;
+}
+
+
+
+
+.flex-row{
+      justify-content: space-around;
+      align-items: center;
+      
+}
+
+

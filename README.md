@@ -2,7 +2,7 @@
 
 ## Description
 
-*Book Search Engine is an application that allows the users to search for their desired books using Googlr publicly available API. The application uses MERN stack and it is connected by Apollo Server and Apollo Provider node packages. In this application the user has the option to signup, login and search for the books and there has the option to save the books, retrieve the saved books and also delete the books. Without login to the application, the user also has the option to search for the book, but at that time he/she will not have the option to save the books. This is a very updated and timely software.*
+*React Redux is the official UI bindings for react Application. It is kept up-to-date with any API changes to ensure that the React components behave as expected. It encourages good 'React' architecture. It implements many performance optimizations internally, which allows to components re-render only when it actually needs.*
 
 
 ## Table of Contents
@@ -23,21 +23,19 @@
 - Picture of the Application.
 ![Application Screen](./images/book-searched.JPG)
 
-- Gif for login-signup
-![login/signup](./images/login-signup.gif)
+- Picture of Application with Cart
+![Application with Cart](./images/login-signup.gif)
 
-- Gif for search my book
+- Picture of Payment with Stripe
 
-![Search my books](./images/search-my-books.gif)
+![Payment options](./images/search-my-books.gif)
 
-- Gif for Saved books and Delete option.
-![Saved book / Remove](./images/see-saved-books-delete.gif)
+- Order History.
+![Order history](./images/see-saved-books-delete.gif)
 
-- Gif for Search without login.
-![Search as Guest](./images/search-without-login.gif)
 
 ## Overview Links
-- [Application walkthrough](https://watch.screencastify.com/v/EQQzhuBWwAAufNYd451Q)
+- [Application walkthrough]()
 
 - [Application Deployed in Heroku](https://book-search-engine-mirza.herokuapp.com/)
 
@@ -71,7 +69,7 @@ THEN I find that the app uses Redux instead of the Context API
 ## Installation
 💾     
 - npm install
-- npm run seed
+- npm install @stripe/stripe-js
 
 ## Tools
 - NodeJS
@@ -87,7 +85,9 @@ THEN I find that the app uses Redux instead of the Context API
   
 Run the following command at the terminal:
   
-`npm start`
+`npm run seed`
+
+`npm run develop`
 
 ## Questions
 ✉️ Contact me with any questions: [email](mailto:awal.mirza2016@gmail.com) , [LinkedIn](https://www.linkedin.com/in/mirza-awal-5972511b5/)

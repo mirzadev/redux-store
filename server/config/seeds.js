@@ -5,11 +5,11 @@ db.once('open', async () => {
   await Category.deleteMany();
 
   const categories = await Category.insertMany([
-    { name: 'Food' },
+    { name: 'Food Items' },
     { name: 'Household Supplies' },
-    { name: 'Electronics' },
-    { name: 'Books' },
-    { name: 'Toys' }
+    { name: 'Auto Parts' },
+    { name: 'Clothings' },
+    { name: 'Gift Items' }
   ]);
 
   console.log('categories seeded');
@@ -18,109 +18,180 @@ db.once('open', async () => {
 
   const products = await Product.insertMany([
     {
-      name: 'Tin of Cookies',
+      name: 'Candy Combo',
       description:
-        'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-      image: 'cookie-tin.jpg',
+        'Variety of tasty Candies of different brand',
+      image: 'Variety-Candy.jpg',
       category: categories[0]._id,
-      price: 2.99,
-      quantity: 500
+      price: 4.99,
+      quantity: 400
     },
     {
-      name: 'Canned Coffee',
+      name: 'Knorr Soup',
       description:
-        'Praesent sed lacinia mauris. Nulla congue nibh magna, at feugiat nunc scelerisque quis. Donec iaculis rutrum vulputate. Suspendisse lectus sem, vulputate ac lectus sed, placerat consequat dui.',
-      image: 'canned-coffee.jpg',
+        'Variety of Knorr Soups with different flavors, 1.5 oz 2 in 1.  ',
+      image: 'Knorr-Soups.png',
       category: categories[0]._id,
-      price: 1.99,
-      quantity: 500
+      price: 3.59,
+      quantity: 1000
     },
     {
-      name: 'Toilet Paper',
-      category: categories[1]._id,
+      name: 'Tin Cookies',
+      category: categories[0]._id,
       description:
-        'Donec volutpat erat erat, sit amet gravida justo sodales in. Phasellus tempus euismod urna. Proin ultrices nisi ut ipsum congue, vitae porttitor libero suscipit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam lacinia a nisi non congue.',
-      image: 'toilet-paper.jpg',
-      price: 7.99,
-      quantity: 20
+        'Royal Dansk Danish Cookies Tin, butter, 24 Ounce .',
+      image: 'Tasty-Cookies-in-Container.jpg',
+      price: 6.99,
+      quantity: 600
     },
     {
-      name: 'Handmade Soap',
-      category: categories[1]._id,
+      name: 'Flogger Coffee',
+      category: categories[0]._id,
       description:
-        'Praesent placerat, odio vel euismod venenatis, lectus arcu laoreet felis, et fringilla sapien turpis vestibulum nisl.',
-      image: 'soap.jpg',
-      price: 3.99,
+        'Folgers, Classic Medium Roast Coffee, 48 oz.',
+      image: 'Flagger-Coffee-Classic-Roast.jpg',
+      price: 59.99,
       quantity: 50
     },
     {
-      name: 'Set of Wooden Spoons',
+      name: 'Household Tools Kit',
       category: categories[1]._id,
       description:
-        'Vivamus ut turpis in purus pretium mollis. Donec turpis odio, semper vel interdum ut, vulputate at ex. Duis dignissim nisi vel tortor imperdiet finibus. Aenean aliquam sagittis rutrum.',
-      image: 'wooden-spoons.jpg',
-      price: 14.99,
+        '40-Piece Household Tools Kit - Small Basic Home Tool Set with Plastic Toolbox - Great for College Students, Household Use & More.',
+      image: 'Household-Tools-Kit.jpg',
+      price: 64.99,
       quantity: 100
     },
     {
-      name: 'Camera',
-      category: categories[2]._id,
+      name: 'Scott Tissue Paper',
+      category: categories[1]._id,
       description:
-        'Vestibulum risus metus, luctus non tortor quis, tincidunt consectetur ex. Nullam vitae lobortis ligula, ut sagittis massa. Curabitur consectetur, tellus at pulvinar venenatis, erat augue cursus erat, eu ullamcorper eros lectus ultrices ipsum. Integer rutrum, augue vitae auctor venenatis, turpis turpis elementum orci, at sagittis risus mi a leo.',
-      image: 'camera.jpg',
-      price: 399.99,
-      quantity: 30
+        'Scott 1000 Sheets Per Roll Toilet Paper, 36 Rolls.',
+      image: 'Scott-Tissue-Paper.jpg',
+      price: 25.99,
+      quantity: 100
     },
     {
-      name: 'Tablet',
-      category: categories[2]._id,
+      name: 'Tide Detergent',
+      category: categories[1]._id,
       description:
-        'In sodales, ipsum quis ultricies porttitor, tellus urna aliquam arcu, eget venenatis purus ligula ut nisi. Fusce ut felis dolor. Mauris justo ante, aliquet non tempus in, tempus ac lorem. Aliquam lacinia dolor eu sem eleifend ultrices. Etiam mattis metus metus. Sed ligula dui, placerat non turpis vitae, suscipit volutpat elit. Phasellus sagittis, diam elementum suscipit fringilla, libero mauris scelerisque ex, ac interdum diam erat non sapien.',
-      image: 'tablet.jpg',
-      price: 199.99,
-      quantity: 30
+        'Tide Original, 96 Loads Liquid Laundry Detergent, 138 Fl Oz.',
+      image: 'Tide-Detergent.jpg',
+      price: 22.99,
+      quantity: 100
     },
     {
-      name: 'Tales at Bedtime',
+      name: 'Glass Set',
+      category: categories[1]._id,
+      description:
+        'Set of Six Vintage Cut Glass Large Tumblers.',
+      image: 'Set-of-Glass.jpg',
+      price: 12.99,
+      quantity: 200
+    },
+    {
+      name: 'Motor Oil',
+      category: categories[2]._id,
+      description: 'Battery Jump Starter. NOCO Boost Plus GB40 1000 Amp 12-Volt UltraSafe Lithium Jump Starter Box, Car Battery Booster Pack, Portable Power Bank Charger, and Jumper Cables and many more.',
+      image: 'Pennzoil-Motor-Oil.jpg',
+      price: 19.99,
+      quantity: 300
+    },
+    {
+      name: 'Battery Jump Starter',
+      category: categories[2]._id,
+      description:
+        'NOCO Boost Plus GB40 1000 Amp 12-Volt UltraSafe Lithium Jump Starter Box, Car Battery Booster Pack, Portable Power Bank Charger, and Jumper Cables and many more.',
+      image: 'Battery-Jump-Starter.jpg',
+      price: 99.99,
+      quantity: 100
+    },
+    {
+      name: 'Wheel Tire',
+      category: categories[2]._id,
+      description:
+        'SuperMax TM-1 215/60R17 96 T Tire.',
+      image: 'Supermax-Tires.jpg',
+      price: 19.99,
+      quantity: 100
+    },
+    {
+      name: 'Windshield Cleaning Tools',
+      category: categories[2]._id,
+      description:
+        'Easily clean the inside surface of your windshield with this Windshield Cleaning Tool. Comes with 2 removable, washable and reusable cloth cleaning pads that can be used wet or dry and a 1-oz. spray bottle to fill with tap water or glass cleaner.',
+      image: 'Windshield-Cleaning-Kit.jpg',
+      price: 15.99,
+      quantity: 70
+    },
+    {
+      name: 'Ladies Shirt',
       category: categories[3]._id,
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
-      image: 'bedtime-book.jpg',
-      price: 9.99,
+        'Long-Sleeve Mockneck Top.',
+      image: 'Ladies-T-Shirt.jpg',
+      price: 19.99,
+      quantity: 30
+    },
+    {
+      name: "Men's Shirt",
+      category: categories[3]._id,
+      description:
+        'Fashionable Wide Striped Sport Shirt in Pink for Men – Lyst.',
+      image: 'Men-Shirt.jpg',
+      price: 19.99,
+      quantity: 20
+    },
+    {
+      name: 'Ladies Trouser',
+      category: categories[3]._id,
+      description: 'NEW Wide-Leg Comfort Trousers.',
+      image: 'Ladies-Trouser.jpg',
+      price: 99.99,
       quantity: 100
     },
     {
-      name: 'Spinning Top',
-      category: categories[4]._id,
-      description: 'Ut vulputate hendrerit nibh, a placerat elit cursus interdum.',
-      image: 'spinning-top.jpg',
-      price: 1.99,
-      quantity: 1000
+      name: "Men's Trouser",
+      category: categories[3]._id,
+      description:
+        'Rokwear Premium Cargo Trouser.',
+      image: 'Fashionable-Trouser-Men.jpg',
+      price: 35.99,
+      quantity: 60
     },
     {
-      name: 'Set of Plastic Horses',
+      name: 'Polarized Sun Glass',
       category: categories[4]._id,
       description:
-        'Sed a mauris condimentum, elementum enim in, rhoncus dui. Phasellus lobortis leo odio, sit amet pharetra turpis porta quis.',
-      image: 'plastic-horses.jpg',
-      price: 2.99,
-      quantity: 1000
+        'Fishing Polarized Sunglasses for Men Driving Running Golf Sports Glasses Square UV Protection Designer Style Unisex',
+      image: 'Polarized-Sunglass.jpg',
+      price: 89.99,
+      quantity: 200
     },
     {
-      name: 'Teddy Bear',
+      name: 'Elite Pen',
       category: categories[4]._id,
       description:
-        'Vestibulum et erat finibus erat suscipit vulputate sed vitae dui. Ut laoreet tellus sit amet justo bibendum ultrices. Donec vitae felis vestibulum, congue augue eu, finibus turpis.',
-      image: 'teddy-bear.jpg',
+        'Custom pens, engraved gifts, engraved pens, personalized pens for elite personalities.',
+      image: 'Custom-Pens.jpg',
+      price: 109.99,
+      quantity: 70
+    },
+    {
+      name: 'Crystal Eiffel Tower ',
+      category: categories[4]._id,
+      description:
+        'A perfect gift for your friend.',
+      image: 'Crystal-Eiffel-Tower.jpg',
       price: 7.99,
       quantity: 100
     },
     {
-      name: 'Alphabet Blocks',
+      name: 'Crystal Feathered Eagle',
       category: categories[4]._id,
       description:
-        'Morbi consectetur viverra urna, eu fringilla turpis faucibus sit amet. Suspendisse potenti. Donec at dui ac sapien eleifend hendrerit vel sit amet lectus.',
-      image: 'alphabet-blocks.jpg',
+        'Choose a statement piece full of freedom and courage with this exquisite eagle. Depicted in sumptuous clear crystal with 646 facets, it is a dynamic design. Perfect as a stand-alone piece in your home, it would also complement the collection of a nature lover.',
+      image: 'Crystal-Eagle.jpg',
       price: 9.99,
       quantity: 600
     }
