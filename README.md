@@ -42,7 +42,7 @@
 ## Overview Links
 - [Application walkthrough]()
 
-- [Application Deployed in Heroku](https://book-search-engine-mirza.herokuapp.com/)
+- [Application Deployed in Heroku](https://redux-store-mirza.herokuapp.com/)
 
 - [Github link](https://mirzadev.github.io/redux-store/)
 
