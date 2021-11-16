@@ -6,7 +6,7 @@ import Cart from "../components/Cart";
 import { QUERY_PRODUCTS } from '../utils/queries';
 import spinner from '../assets/spinner.gif';
 
-
+import { useStoreContext } from "../utils/GlobalState";
 import {
   REMOVE_FROM_CART,
   UPDATE_CART_QUANTITY,
@@ -14,7 +14,7 @@ import {
   UPDATE_PRODUCTS,
 } from '../utils/actions';
 
-import { useStoreContext } from "../utils/GlobalState";
+
 
 
 function Detail() {
