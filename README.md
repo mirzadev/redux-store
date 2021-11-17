@@ -40,7 +40,7 @@
 
 
 ## Overview Links
-- [Application walkthrough]()
+- [Application walkthrough](https://watch.screencastify.com/v/YrGWoL55svWsD4Odbhg8)
 
 - [Application Deployed in Heroku](https://redux-store-mirza.herokuapp.com/)
 
